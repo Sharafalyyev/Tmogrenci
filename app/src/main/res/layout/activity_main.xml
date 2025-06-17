@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <include layout="@layout/toolbar_tmogrenci" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="72dp"
+        android:paddingBottom="24dp">
+
+        <!-- Başlık ve Alt Başlık -->
+        <LinearLayout
+            android:id="@+id/headerSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/txtMainHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Türkmenistan'dan "
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="#1D2939"
+                android:fontFamily="@font/urbanist_bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/txtMainHeadingGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Türk Üniversitelerine "
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="#16B364"
+                android:fontFamily="@font/urbanist_bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/txtMainSubheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TMogrenci, Türkmenistanlı öğrencilere Türkiye'deki dünya standartlarında üniversiteleri keşfetme, başvuru sürecini yönetme ve dünyanın en kültürel zengin ülkelerinden birinde akademik yolculuklarına başlama konusunda uzmanlaşmıştır."
+                android:textSize="16sp"
+                android:textColor="#475467"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+        </LinearLayout>
+
+        <!-- Bayraklar: Daire içinde, arka plan yok, gerçek daire kırpma -->
+        <LinearLayout
+            android:id="@+id/flagsSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/headerSection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/turkeyflag"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.CircularImageView"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Türkiye Bayrağı" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/turkmenflag"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.CircularImageView"
+                android:contentDescription="Türkmenistan Bayrağı" />
+        </LinearLayout>
+
+        <!-- Butonlar -->
+        <LinearLayout
+            android:id="@+id/buttonsSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/flagsSection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAnasayfa"
+                style="@style/TmogrenciButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="HAKKIMIZDA" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUniversiteler"
+                style="@style/TmogrenciButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TÜRKİYE'DEKİ ÜNİVERSİTELER" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnYardim"
+                style="@style/TmogrenciButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="YARDIM ALIN" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIletisim"
+                style="@style/TmogrenciButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="İLETİŞİM" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Floating Action Button for Chat Support -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:contentDescription="@string/chat_support"
+        app:backgroundTint="@color/primary_green"
+        app:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_chat_support" />
+
+</FrameLayout>

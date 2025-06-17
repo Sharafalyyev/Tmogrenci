@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_green">#40BF6A</color>
+    <color name="background_white">#F9FAFB</color>
+    <color name="surface_dark">#18181C</color>
+    <color name="background_black">#131316</color>
+    <color name="white">#F9FAFB</color>
+    <color name="black">#131316</color>
+    
+    <!-- Chat Interface Colors -->
+    <color name="primary">#2196F3</color>
+    <color name="surface_light">#F5F5F5</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+</resources>

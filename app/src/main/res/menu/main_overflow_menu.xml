@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_devlet_belgeler"
+        android:title="Devlet Üniversite için gerekli belgeler"
+        android:titleTextColor="#000000"/>
+    <item
+        android:id="@+id/menu_vakif_belgeler"
+        android:title="Vakıf Üniversitesi için gerekli belgeler"
+        android:titleTextColor="#000000"/>
+    <item
+        android:id="@+id/menu_ikamet_belgeler"
+        android:title="Ikamet izni için gerekli belgeler"
+        android:titleTextColor="#000000"/>
+    <item
+        android:id="@+id/menu_vize_sartlari"
+        android:title="Türkiyede vize şartlari"
+        android:titleTextColor="#000000"/>
+</menu> 

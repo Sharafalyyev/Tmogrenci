@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar_tmogrenci" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="24dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bize Mesaj Gönderin"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/urbanist_bold"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aşağıdaki formu doldurun, 24 saat içinde size geri dönüş yapacağız. Türkçe ve Türkmence yanıt veriyoruz."
+                            android:textSize="15sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginBottom="24dp" />
+
+                        <!-- Ad Soyad -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ad Soyad *"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="4dp" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtAdSoyad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Adınızı ve soyadınızı girin"
+                                android:textColor="@android:color/black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- E-posta Adresi -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="E-posta Adresi *"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="4dp" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtIletisim"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="E-posta adresinizi girin"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@android:color/black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Telefon Numarası -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Telefon Numarası"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="4dp" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtTelefon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Telefon numaranızı girin"
+                                android:inputType="phone"
+                                android:textColor="@android:color/black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Mesaj -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mesaj *"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="4dp" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="24dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtMesaj"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:hint="Eğitim hedeflerinizden ve Türkiye'de nasıl yardımcı olabileceğimizden bahsedin..."
+                                android:gravity="top"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5"
+                                android:textColor="@android:color/black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Gönder Butonu -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnGonder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mesajı Gönder"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            app:cornerRadius="8dp"
+                            app:backgroundTint="@color/primary_green"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Floating Action Button for Chat Support -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:contentDescription="@string/chat_support"
+        app:backgroundTint="@color/primary_green"
+        app:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_chat_support" />
+
+</FrameLayout>

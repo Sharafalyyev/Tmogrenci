@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "766422578915",
+    "project_id": "tmuniversitylist",
+    "storage_bucket": "tmuniversitylist.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766422578915:android:e03d320969c1546e19f7d6",
+        "android_client_info": {
+          "package_name": "com.example.tmogrenci"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsPzeuZHD3aW05IrwMq2RjI7f8DmqdmGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
